@@ -23,18 +23,13 @@ menubar.addEventListener("click", (e) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (firstName.value === "") {
-    firstName.style.border = "1px solid red";
-    alert("please enter your first Name");
-  } else if (LastName.value === "") {
-    firstName.style.border = "1px solid red";
-    alert("please enter your last Name");
-  }
+  if (firstName.value === "" || LastName.value === ' ' || Email.value === "") {
+    
+    alert("Please fill in all fields before submitting! ");
+  } 
+  
 
-  else if (Email.value === "") {
-    firstName.style.border = "1px solid red";
-    alert("please enter your email");
-  }
+  
   else{
     Toastify({
   text: "✅ Form sent successfully!",

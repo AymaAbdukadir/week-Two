@@ -134,11 +134,11 @@ body {
 
 .hero .leaf {
   position: absolute;
-  width: 150px;
+  width: 100px;
   z-index: -99999;
   animation: leaf 0.7s ease-out;
-  left: 40%;
-  top: 30%;
+  left: 38%;
+  top: 32%;
   transform: rotate(50deg);
 }
 
@@ -160,11 +160,11 @@ body {
 }
 .hero .content h1 {
   color: #ffc328;
-  font-size: 3.4em;
+  font-size: 3.2em;
   text-transform: capitalize;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
 
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .hero .content p {
@@ -550,6 +550,10 @@ form textarea {
   margin-bottom: 10px;
   resize: none;
   border: 1px solid #228b22;
+  padding: 5px;
+  font-size: 1em;
+  outline: none;
+   border-radius: 5px;
 }
 
 form .Submit {
