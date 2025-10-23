@@ -124,7 +124,7 @@ body {
 /* hero section */
 
 .hero {
-  min-width: 100%;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -612,7 +612,7 @@ form .Submit {
 .social h3 {
   font-size: 1.2em;
   margin-bottom: 20px;
-  color: #228b22;
+  color: #0c1116  ;
 }
 .social .social-icons {
   display: flex;
@@ -622,6 +622,7 @@ form .Submit {
 }
 .social .social-icons i {
   font-size: 1.2em;
+  color: #228b22;
 }
 
 .copyright {
@@ -634,9 +635,9 @@ form .Submit {
 }
 
 .copyright span {
-  color: #ffc328; /* brand accent */
+  color: #228b22; 
   font-weight: 600;
-  /* font-size: 2em; */
+  
 }
 
 .copyright p {
@@ -647,7 +648,7 @@ form .Submit {
 /* responsive navbar style */
 
 /* responsivenes */
-@media screen and (max-width: 600px) {
+@media screen and (max-width:1080px) {
   body {
     width: 90%;
   }
@@ -727,7 +728,7 @@ form .Submit {
   }
 
   .hero {
-    width: 100%;
+    min-width: 100%;
     padding: 10px;
     flex-direction: column;
     margin-bottom: 30px;
@@ -736,12 +737,14 @@ form .Submit {
     min-width: 100%;
   }
   .hero .content h1 {
+    min-width: 100%;
     color: #ffc328;
-    font-size: 2em;
+    font-size: 1.8em;
     text-transform: capitalize;
     line-height: 1.5;
+    text-align: justify;
 
-    letter-spacing: 0px;
+    letter-spacing: 1px;
   }
   .hero .content h5 {
     font-size: 1em;
@@ -756,10 +759,11 @@ form .Submit {
   .hero .btns {
     flex-direction: column;
     gap: 15px;
+    margin-bottom: 20px;
   }
   .hero .btns .order-fresh,
   .watch {
-    width: 50%;
+    width: 100%;
     font-size: 1.3em;
   }
 
@@ -784,25 +788,26 @@ form .Submit {
 
   .products .product-box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 15px;
     justify-items: center;
   }
 
   .products .popular-product .product-box .box {
-    width: 100%;
+    min-width: 100%;
     height: auto;
-    padding: 15px;
+    padding: 20px;
   }
 
   .Top-products {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  
     gap: 20px;
   }
 
   .Top-products .product {
-    height: auto;
-    padding: 10px;
+   min-width: 100%;
+   min-height: 50vh;
   }
 
   .Top-products .product img {
@@ -872,7 +877,7 @@ form .Submit {
     width: 100%;
     background-color: #fff;
 
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -890,15 +895,11 @@ form .Submit {
     margin-left: 40px;
   }
 
-  @media screen and (max-width: 400px) {
-    .products .product-box,
-    .Top-products {
-      grid-template-columns: 1fr;
-    }
-
-    .hero .btns .order-fresh,
-    .hero .btns .watch {
-      width: 100%;
-    }
-  }
+  .copyright p {
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-size: 0.7em;
+  font-weight: 500;
+}
+ 
 }
