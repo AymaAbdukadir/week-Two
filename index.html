@@ -39,8 +39,10 @@
         <div class="icons">
           <i class="fa-regular fa-heart"></i>
 
-          <i class="fa-solid fa-bag-shopping"></i>
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="cart-container">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+          </div>
         </div>
       </div>
       <i class="fa-solid fa-bars"></i>
@@ -53,19 +55,17 @@
         <h5>Hami MiniMarket</h5>
         <h1>Fresh Local Organic Fruits and Vegetables</h1>
         <p>
-
           At Hami Minimarket, we deliver the finest fruits and vegetables,
           freshly picked and full of flavor. Eat healthy, shop local, and enjoy
           freshness in every bite
         </p>
-          <div class="btns">
-            <button class="order-fresh">Order Fresh</button>
-            <button class="watch">
-              <span><i class="fa-solid fa-play"></i></span>
-              <span>watch vedio</span>
-            </button>
-          </div>
-        
+        <div class="btns">
+          <button class="order-fresh">Order Fresh</button>
+          <button class="watch">
+            <span><i class="fa-solid fa-play"></i></span>
+            <span>watch vedio</span>
+          </button>
+        </div>
       </div>
       <div class="image">
         <img src="assets/fruits-splash.png" alt="" />
@@ -104,140 +104,40 @@
           </div>
         </div>
       </div>
-      <h1>Top products</h1>
-      <div class="Top-products" id="products">
-        <div class="product">
-          <img src="assets/carot.png" alt="" />
-          <div class="product-info">
-            <h4>carrot</h4>
-            <p>Bright, crunchy, and full of sweetness</p>
-            <p class="price">$5.2</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="assets/Bannana.png" alt="" />
-          <div class="product-info">
-            <h4>Banana</h4>
-            <p>A soft, sweet fruit with a yellow peel.</p>
-            <p class="price">$6.5</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-        <div class="product">
-          <img src="assets/Blueberry.png" alt="" />
-          <div class="product-info">
-            <h4>Blueberry</h4>
-            <p>Small, round, dark-blue fruit</p>
-            <p class="price">$3.0</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-        <div class="product">
-          <img src="assets/Pineapple.png" alt="" />
-          <div class="product-info">
-            <h4>Pineapple</h4>
-            <p>A tropical fruit with a spiky outer</p>
-            <p class="price">$4.0</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-        <div class="product">
-          <img src="assets/Bell Pepper.png" alt="" />
-          <div class="product-info">
-            <h4>Bell Pepper</h4>
-            <p>risp, sweet vegetables</p>
-            <p class="price">$2.0</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="assets/watemelon.png" alt="" />
-          <div class="product-info">
-            <h4>Watermelon</h4>
-            <p>Cool juicy and super refreshing</p>
-            <p class="price">$3.0</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-        <div class="product">
-          <img src="assets/lemon.png" alt="" />
-          <div class="product-info">
-            <h4>🍋 Lemon</h4>
-            <p>Fresh and tangy</p>
-            <p class="price">$4.89</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-        <div class="product">
-          <img src="assets/Broccoli.png" alt="" />
-          <div class="product-info">
-            <h4>Broccoli</h4>
-            <p>Tiny green trees full of nutrients</p>
-            <p class="price">$5.5</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-        <div class="product">
-          <img src="assets/Beetroot.png" alt="" />
-          <div class="product-info">
-            <h4>Beetroot</h4>
-            <p>Deep purple, sweet, and earthy</p>
-            <p class="price">$9.0</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-        <div class="product">
-          <img src="assets/Apple-green.png" alt="" />
-          <div class="product-info">
-            <h4>Apple</h4>
-            <p>A sweet, crisp fruit that comes in red</p>
-            <p class="price">$5.89</p>
-            <span class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </span>
-            <i class="fa-regular fa-heart"></i>
-          </div>
-        </div>
-      </div>
-      <div class="arrows">
-        <i class="fa-solid fa-chevron-left"></i>
-        <i class="fa-solid fa-chevron-right"></i>
-      </div>
+     
+        <h1>Top products </h1>
+        
     </div>
+
+    <div class="product-search">
+
+      <div class="input-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" name="" id="product-name" placeholder="filter by " >
+      </div>
+      <div class="category">
+        <button class="btns fruits">Fruits </button>
+        <button class="btns vegetables">Vegetables </button>
+        
+      </div>
+
+<div class="price-filter">
+ 
+  <div class="price-inputs">
+    <input type="number" id="price" placeholder="filter by price " min="0">
+  
+  </div>
+  
+</div>
+
+      
+
+    </div>
+    <div class="Top-products" id="products"></div>
 
     <div class="about" id="about us">
       <div class="about-img">
-        <img src="assets/fruit-plate2.png" alt="" />
+        <img src="assets/fruit-plate.png" alt="" />
       </div>
       <div class="about-content">
         <h1>About Us <i class="fa-solid fa-carrot"></i></h1>
@@ -291,7 +191,7 @@
     </div>
 
     <footer class="footer">
-      <!--  -->
+        
 
       <div class="logo">
         <h1><span>Hami</span> Minimarket</h1>
@@ -317,6 +217,18 @@
           <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
+
+
+       <div class="newsletter">
+    <h3>Subscribe to Our Newsletter</h3>
+    <p>Get fresh updates, promotions & discounts straight to your inbox.</p>
+    <div class="newsletter-input">
+      <input type="email" placeholder="Enter your email" />
+      <button type="submit">Subscribe</button>
+    </div>
+  </div>
+
+      
     </footer>
     <div class="copyright">
       <p>&copy; 2025 <span>Hami Minimarket</span>. All rights reserved. 🍎</p>
