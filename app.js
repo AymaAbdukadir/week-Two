@@ -7,6 +7,7 @@ const firstName = document.querySelector(".first-name");
 const LastName = document.querySelector(".last-name");
 const Email = document.querySelector(".email");
 let totalCart = document.querySelector(".cart-container .cart-count");
+let input = document.getElementById("product-name");
 
 menubar.addEventListener("click", (e) => {
   if (e.target.className.includes("fa-bars")) {
@@ -38,7 +39,7 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// Task 2 seacrh products by their name
+// Task 2 seacrh products by their name / category or the price 
 
 let Top_products = document.querySelector(".Top-products");
 
@@ -164,25 +165,33 @@ products.map((product) => {
 
 function search(name) {
   Top_products.innerHTML = "";
+ 
   const result = products.filter((product) => {
     if (product.name.toLowerCase().includes(name)) {
         return   Top_products.appendChild(producttemp(product));
+        
     }
 
+    
    
   });
   console.log(result)
    if(result.length === 0   ){
      Top_products.innerHTML = "<h1> there is no  product found with that name </h1>"
     }
+
+    
+    
 }
 
 // search by product name
-let input = document.getElementById("product-name");
 
-input.addEventListener("input", () => {
+
+input.addEventListener("change", () => {
+
   let searchValue = input.value.trim().toLowerCase();
   search(searchValue);
+  input.value = "";
 });
 
 // search by category
@@ -202,12 +211,14 @@ fruitsBtn.addEventListener("click", () => {
 
 vegetablesBtn.addEventListener("click", () => {
   Top_products.innerHTML = "";
+  input.value = "" ;
 
   products.map((product) => {
     if (product.category == "Vegetable") {
       Top_products.appendChild(producttemp(product));
     }
   });
+
 });
 
 // filter by price
@@ -215,6 +226,7 @@ vegetablesBtn.addEventListener("click", () => {
 let priceInput = document.getElementById("price");
 
 priceInput.addEventListener("input", () => {
+  
   Top_products.innerHTML = "";
   let selectedprice = priceInput.value;
   products.filter((product) => {
