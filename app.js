@@ -6,8 +6,7 @@ const sumbitBtn = document.querySelector(".Sumbit");
 const firstName = document.querySelector(".first-name");
 const LastName = document.querySelector(".last-name");
 const Email = document.querySelector(".email");
-let totalCart =  document.querySelector('.cart-container .cart-count') ;
-
+let totalCart = document.querySelector(".cart-container .cart-count");
 
 menubar.addEventListener("click", (e) => {
   if (e.target.className.includes("fa-bars")) {
@@ -49,71 +48,71 @@ const products = [
     description: "Bright, crunchy, and full of sweetness",
     price: 5.2,
     image: "assets/carot.png",
-    category: "Vegetable"
+    category: "Vegetable",
   },
   {
     name: "Banana",
     description: "A soft, sweet fruit with a yellow peel.",
     price: 6.5,
     image: "assets/Bannana.png",
-    category: "Fruit"
+    category: "Fruit",
   },
   {
     name: "Blueberry",
     description: "Small, round, dark-blue fruit",
     price: 3.0,
     image: "assets/Blueberry.png",
-    category: "Fruit"
+    category: "Fruit",
   },
   {
     name: "Pineapple",
     description: "A tropical fruit with a spiky outer",
     price: 4.0,
     image: "assets/Pineapple.png",
-    category: "Fruit"
+    category: "Fruit",
   },
   {
     name: "Bell Pepper",
     description: "Crisp, sweet vegetables",
     price: 2.0,
     image: "assets/Bell Pepper.png",
-    category: "Vegetable"
+    category: "Vegetable",
   },
   {
     name: "Watermelon",
     description: "Cool juicy and super refreshing",
     price: 3.0,
     image: "assets/watemelon.png",
-    category: "Fruit"
+    category: "Fruit",
   },
   {
     name: "Lemon",
     description: "Fresh and tangy",
     price: 4.89,
     image: "assets/lemon.png",
-    category: "Fruit"
+    category: "Fruit",
   },
   {
     name: "Broccoli",
     description: "Tiny green trees full of nutrients",
     price: 5.5,
     image: "assets/Broccoli.png",
-    category: "Vegetable"
+    category: "Vegetable",
   },
   {
     name: "Beetroot",
     description: "Deep purple, sweet, and earthy",
     price: 9.0,
     image: "assets/Beetroot.png",
-    category: "Vegetable"
+    category: "Vegetable",
   },
   {
     name: "Apple",
     description: "A sweet, crisp fruit that comes in red",
     price: 5.89,
     image: "assets/Red Apple.png",
-    category: "Fruit"
-  }
+    category: "Fruit",
+  },
 ];
 
 function producttemp(product) {
@@ -131,11 +130,11 @@ function producttemp(product) {
   let price = document.createElement("p");
   price.classList.add("price");
   price.textContent = `$ ${product.price}`;
-  let productcategory = document.createElement('span')
-  productcategory.classList.add('product-category');
+  let productcategory = document.createElement("span");
+  productcategory.classList.add("product-category");
   productcategory.textContent = product.category;
-  let categName = document.createElement('span');
-  categName.classList.add('product-name-categ')
+  let categName = document.createElement("span");
+  categName.classList.add("product-name-categ");
 
   let span = document.createElement("span");
   span.classList.add("cart");
@@ -143,11 +142,9 @@ function producttemp(product) {
   let i = document.createElement("i");
   i.className = "fa-regular fa-heart";
 
-
-
-  categName.appendChild(h4)
+  categName.appendChild(h4);
   categName.appendChild(productcategory);
-  productInfo.appendChild(categName)
+  productInfo.appendChild(categName);
   productInfo.appendChild(p);
   productInfo.appendChild(price);
   productInfo.appendChild(span);
@@ -155,8 +152,6 @@ function producttemp(product) {
   div.appendChild(img);
   div.appendChild(productInfo);
   div.appendChild(i);
-
-  console.log(div)
 
   return div;
 }
@@ -169,80 +164,72 @@ products.map((product) => {
 
 function search(name) {
   Top_products.innerHTML = "";
-   products.filter((product) => {
+  const result = products.filter((product) => {
     if (product.name.toLowerCase().includes(name)) {
-      Top_products.appendChild(producttemp(product));
+        return   Top_products.appendChild(producttemp(product));
     }
+
+   
   });
-  
-  
+  console.log(result)
+   if(result.length === 0   ){
+     Top_products.innerHTML = "<h1> there is no  product found with that name </h1>"
+    }
 }
 
+// search by product name
 let input = document.getElementById("product-name");
 
 input.addEventListener("input", () => {
   let searchValue = input.value.trim().toLowerCase();
   search(searchValue);
-  
 });
-
-
 
 // search by category
 
-let fruitsBtn = document.querySelector('.fruits');
-let vegetablesBtn = document.querySelector('.vegetables');
+let fruitsBtn = document.querySelector(".fruits");
+let vegetablesBtn = document.querySelector(".vegetables");
 
-fruitsBtn.addEventListener('click' , ()=>{
+fruitsBtn.addEventListener("click", () => {
   Top_products.innerHTML = "";
- 
-  products.map(product  =>{
-    if(product.category == 'Fruit'){
-      
-      Top_products.appendChild(producttemp(product))
+
+  products.map((product) => {
+    if (product.category == "Fruit") {
+      Top_products.appendChild(producttemp(product));
     }
-  })
-})
+  });
+});
 
-
-
-vegetablesBtn.addEventListener('click' , ()=>{
+vegetablesBtn.addEventListener("click", () => {
   Top_products.innerHTML = "";
- 
-  products.map(product  =>{
-    if(product.category == 'Vegetable'){
-      
-      Top_products.appendChild(producttemp(product))
+
+  products.map((product) => {
+    if (product.category == "Vegetable") {
+      Top_products.appendChild(producttemp(product));
     }
-  })
-})
+  });
+});
 
+// filter by price
 
+let priceInput = document.getElementById("price");
 
-// filter by price 
-
-let priceInput = document.getElementById('price')
-
-
-priceInput.addEventListener('input' , ()=>{
+priceInput.addEventListener("input", () => {
   Top_products.innerHTML = "";
   let selectedprice = priceInput.value;
-  products.filter(product =>{
-    if(product.price <= selectedprice){
-      Top_products.appendChild(producttemp(product))
+  products.filter((product) => {
+    if (product.price < selectedprice) {
+      Top_products.appendChild(producttemp(product));
     }
-  })
-  
+  });
+});
 
-})
+let cart = document.querySelectorAll(" .cart  .fa-cart-shopping");
+console.log(cart);
 
-
-let cart = document.querySelectorAll(' .cart  .fa-cart-shopping');
-console.log(cart)
-
-cart.forEach(c => {
-  c.addEventListener('click' , ()=>{
-    totalCart.textContent ++ ;
-    console.log(totalCart.textContent)
-  })
-})
+cart.forEach((c) => {
+  c.addEventListener("click", () => {
+    totalCart.textContent++;
+    console.log(totalCart.textContent);
+  });
+});
